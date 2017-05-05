@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>test</title>
+    <meta charset="UTF-8"/>
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box;}
+        .box{position:relative;width:375px; height:300px;background-color:#fff;margin:100px;}
+
+        .bone{position:absolute;left:18px;top:0;width:340px;height:30px;border-top:1px solid #1c1c1c;border-bottom:1px solid #1c1c1c;z-index:1;}
+        .left,.right{position:absolute;width:20px;height:30px;border:1px solid #1c1c1c;}
+        .left{left:-27px;border-right:none;border-top-left-radius: 30px;border-bottom-left-radius:30px;}
+        .left1{top:-15px;transform:rotate(60deg);}
+        .left2{top:15px;transform:rotate(-60deg);}
+
+        .right{right:-27px;border-left:none;border-top-right-radius: 30px;border-bottom-right-radius:30px;}
+        .right1{top:-15px;transform:rotate(-60deg);}
+        .right2{top:15px;transform:rotate(60deg);}
+        .bone1{ top:135px;transform:rotate(36deg);}
+        .bone2{top:135px;transform:rotate(-36deg);}
+
+        .hatafter,.hatbefore{position:absolute;top:50px;left:50%;margin-left:-113px;background-color:#febf00;width:226px;height:113px;border-top-left-radius: 113px;border-top-right-radius:113px;transform:rotateX(100deg);z-index:2;border:1px solid #000;border-bottom:none;box-shadow:0 0 2px #000;}
+        .hatbefore{top:36px;transform:rotateX(85deg);z-index:4;}
+
+        .head{border:1px solid #000;background-color:#febf00;position:absolute;width:160px;height:160px;border-radius: 50%;top:30px;left:50%;margin-left:-80px;z-index:3;box-shadow:0 0 2px #000;}
+        .headinner{width:100%;height:100%;border-radius:50%;position:relative;overflow: hidden;box-shadow:0 0 2px #000;}
+        .headinner:before{content:'';position: absolute;width:160px;height:10px;background-color:#ca2714;top:40px;border-top:2px solid #000;border-bottom:2px solid #000;box-shadow:0 0 2px #000;}
+        .headinner:after{content:'';position:absolute;width:160px;height:100px;background-color:#fff;top:60px;left:0;}
+        .eye{position:absolute;width:50px;height:50px;border-radius: 50%;background-color:#211917;top:70px;}
+        .lefteye{left:15px;}
+        .righteye{right:15px;}
+        .nose{position:absolute;width:26px;height:26px;border-radius: 50%;background-color:#211a14;top:120px;left:50%;margin-left:-13px;}
+
+        .mouse{width:90px;height:100px;position:absolute;z-index:2;top:160px;left:50%;margin-left:-45px;overflow:hidden;}
+
+        .mouseline{width:76px;height:100px;position:absolute;z-index:2;top:128px;left:50%;margin-left:-38px;background-color:#fff;}
+        .mouseleftline{border-left:1px solid #1c1c1c;transform:rotate(10deg);}
+        .mouserightline{border-right:1px solid #1c1c1c;transform:rotate(-10deg);}
+        .tooth{width:160px;height:160px;border:1px solid #1c1c1c;border-radius:50%;position:relative;left:-35px;overflow:hidden;}
+        .tooth1{top:-115px;}
+        .tooth2{top:-260px;}
+        .mousebottom{border:1px solid #1c1c1c;width:90px;height:40px;position: relative;top:-260px;border-bottom-left-radius:40px;border-bottom-right-radius: 40px;border-top:none;z-index:5;}
+        .line{position:absolute;border-left:1px solid #1c1c1c;width:1px; height:300px;top:-140px;left:50%;}
+        .lineleft{transform:rotateZ(9deg);}
+        .lineright{transform:rotateZ(-9deg);}
+    </style>
+</head>
+<body>
+<div class="box">
+    <div class="bone bone1">
+        <div class="left left1"></div>
+        <div class="left left2"></div>
+        <div class="right right1"></div>
+        <div class="right right2"></div>
+    </div>
+    <div class="bone bone2">
+        <div class="left left1"></div>
+        <div class="left left2"></div>
+        <div class="right right1"></div>
+        <div class="right right2"></div>
+    </div>
+    <div class="hatafter"></div>
+    <div class="hatbefore"></div>
+    <div class="head">
+        <div class="headinner"></div>
+        <div class="eye lefteye"></div>
+        <div class="eye righteye"></div>
+        <div class="nose"></div>
+    </div>
+
+    <div class="mouseline mouseleftline"></div>
+    <div class="mouseline mouserightline"></div>
+    <div class="mouse">
+        <div class="tooth tooth1"></div>
+        <div class="tooth tooth2">
+            <div class="line lineleft"></div>
+            <div class="line"></div>
+            <div class="line lineright"></div>
+        </div>
+        <div class="mousebottom"></div>
+    </div>
+</div>
+</body>
+</html>
